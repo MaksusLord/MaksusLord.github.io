@@ -132,7 +132,7 @@ body {
                             margin: 0;
                             text-align: right;
                             }
-                            
+
                             figure {
                                 display: inline-block;
                                 margin: 0;
@@ -154,6 +154,6 @@ body {
                                 font-size: 14px;
                                 color: #29c5e6;
                                 }
-                                <section > figure + figure {
+                                ::selection figure + figure {
                                 margin-left: 28px;
                                 }
