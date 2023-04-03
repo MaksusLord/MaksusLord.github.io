@@ -25,8 +25,8 @@ body {
     }
 
     #wrapper {
-        max-width: 960px;
-        margin: auto;
+        max-width: 200px;
+        margin: right;
         }
         header {
         padding: 20px 0;
