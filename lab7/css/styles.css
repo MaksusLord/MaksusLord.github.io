@@ -168,7 +168,7 @@ body {
                                     }
 
                                     figure figcaption {
-                                        font-size: 16px;
+                                        font-size: 12px;
                                         font-weight: 300;
                                         margin-top: 4px;
                                         }
@@ -180,7 +180,7 @@ body {
                                         margin-top: 16px;
                                         }
                                         .team-row figure + figure {
-                                        margin-left: 43px;
+                                        margin-left: 40px;
                                         }
 
                                     footer {
