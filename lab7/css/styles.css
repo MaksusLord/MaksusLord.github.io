@@ -173,16 +173,16 @@ body {
                                         margin-top: 4px;
                                         }
                                         figure div {
-                                        font-size: 14px;
+                                        font-size: 12px;
                                         color: #29c5e6;
                                         }
                                         .team-row figure {
-                                        margin-top: 20px;
+                                        margin-top: 16px;
                                         }
                                         .team-row figure + figure {
                                         margin-left: 43px;
                                         }
-                                        
+
                                     footer {
                                         background: #7e7e7e;
                                         color: #dbdbdb;
