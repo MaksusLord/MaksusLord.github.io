@@ -69,7 +69,23 @@
       </nav>
 
     <!-- Нижняя часть "шапки" сайта -->
-    <div id="header-bottom"></div>
+    <div id="header-bottom" style="position:relative;">
+        <img src="images/banner.jpg" style="width:100%;">
+        <div id="bannertext" style="position:absolute; top:10%; width:100%; text-align:center; color:white;">
+          <!-- Этот блок будет отображаться на устройствах со средним и большим размером экрана -->
+          <div class="hidden-xs">
+            <h1>Мы предлагаем<br />
+              <small style="color: white;">маркетинг в социальных сетях для бизнеса</small>
+            </h1>
+          </div>
+          <!-- Этот блок будет отображаться только на устройствах с маленьким экраном -->
+          <div class="hidden-sm hidden-md hidden-lg">
+            <p class="lead">Мы предлагаем маркетинг в социальных сетях для бизнеса</p>
+          </div>
+          <!-- Кнопка "Бесплатная консультация" -->
+          <a class="btn btn-danger btn-lg">Консультация</a>
+        </div>
+      </div>
 
     <!-- Блок об услугах компании -->
     <div id="main">
