@@ -1,6 +1,6 @@
 "use strict";
 
-function z1() {
+function pow() {
   function pow(x, n) {
     if (n === 0) {
       return 1;
@@ -17,7 +17,7 @@ function z1() {
   alert(pow(x, n));
 }
 
-function z2() {
+function sumTo() {
   function sumTo(n) {
     if (n === 1) {
       return 1;
@@ -29,7 +29,7 @@ function z2() {
   alert(sumTo(n));
 }
 
-function z3() {
+function factorial() {
   function factorial(n) {
     if (n === 0) {
       return 1n;
@@ -41,7 +41,7 @@ function z3() {
   alert(factorial(n));
 }
 
-function z4() {
+function fib() {
   function fib(n) {
     if (n === 0 || n === 1) {
       return BigInt(n);
@@ -53,7 +53,7 @@ function z4() {
   alert(fib(100));
 }
 
-function z5() {
+function compare() {
   function compare(x) {
     return function(y) {
       if (y > x) {
@@ -71,7 +71,7 @@ function z5() {
   alert(compare(5)(6));
 }
 
-function z6() {
+function sum() {
   function sum(...args) {
     return args.reduce((acc, cur) => acc + cur, 0);
   }
