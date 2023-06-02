@@ -40,7 +40,6 @@ function number() {
 }
 
 function simple() {
-    
   let num=prompt("Введите число");
   let k;
   var lst=[];
@@ -57,7 +56,6 @@ function simple() {
       }
   }
   alert("Все простые числа до " +num+ ": " +lst);
-  
 }
 
 function cat_dog() {
