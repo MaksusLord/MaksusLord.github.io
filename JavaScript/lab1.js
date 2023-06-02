@@ -1,4 +1,5 @@
 "use strict";
+
 function vozrast_pol() {
     let age,gender;
 let age = prompt("Введите ваш возраст:");
