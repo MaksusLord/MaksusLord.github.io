@@ -40,22 +40,22 @@ function number() {
 }
 
 function simple() {
-  let n = prompt("Введите число:");
+    let n = prompt("Введите число:");
 
-  for (let i = 2; i <= n; i++) {
-    let isPrime = true;
+    for (let i = 2; i <= n; i++) {
+      let isPrime = true;
 
-    for (let j = 2; j < i; j++) {
-      if (i % j === 0) {
-        isPrime = false;
-        break;
+      for (let j = 2; j < i; j++) {
+        if (i % j === 0) {
+          isPrime = false;
+          break;
+        }
       }
-    }
 
-  if (isPrime) {
-    console.log(i);
+    if (isPrime) {
+      console.log(i);
+    }
   }
-}
 }
 
 function cat_dog() {
