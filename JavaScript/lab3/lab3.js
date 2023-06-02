@@ -1,5 +1,7 @@
 "use strict";
 
+import { fib } from './lab2.js';
+
 function getDecimal(num) {
   return Math.abs(num - Math.trunc(num));
 }
@@ -27,8 +29,6 @@ function truncate(str, maxlength) {
 function camelize(str) {
   return str.split('-').map((word, index) => index === 0 ? word : ucFirst(word)).join('');
 }
-
-import { fib } from './lab2.js';
 
 function fibs(n) {
   let arr = [];
