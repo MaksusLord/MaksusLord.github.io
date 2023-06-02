@@ -1,61 +1,61 @@
-"use strict";
+function pow(x, n)
+{
+    return x**n;
+}
 
-function pow(x, n) {
-    if (n==0){ return 1
-    } else if (n>0){
-        for(let i=1; i<n; i++){
-           x*=x
+function sumTo(n)
+{
+    return (n*(n+1))/2;  
+
+}
+
+function factorial(n)
+{
+    if (n<=0)
+    {
+        return 1n;
+    }
+    else{
+        res = BigInt (n) *  BigInt(factorial(n-1))
+    }
+    return res;
+}
+
+function fib(n){
+    a = BigInt(1);
+    b=BigInt(1);
+    if (n== BigInt(0))
+    {
+        return BigInt(0);
+    }
+    else
+    {
+        for (i = BigInt(3); i<=n; i++) 
+        {
+            c = a+b;
+            a=b;
+            b=c;
         }
-        return x
-    }else return 1 / pow(x, -n);
-  }
-
-  function sumTo(n) {
-    if (n == 1) {
-      return 1;
-    } else {
-      return n + sumTo(n-1);
+        return b;
     }
-  }
+}
 
-  function factorial(n) {
-    if (n === 0 || n === 1) {
-      return BigInt(1);
-    } else {
-      return BigInt(n) * factorial(n - 1);
+function compare(x)
+{
+return function(y)
+{
+    if (y>x) return true;
+    else if (y<x) return false;
+    else if (y==x) return null;
+}
+}
+
+function sum()
+{
+    var result=0;
+    for (var i=0; i<arguments.length; i++)
+    {
+        result+=arguments[i]
     }
-  }
-
-  function fib(n) {
-    if (n === 0) {
-      return BigInt(0);
-    } else if (n === 1) {
-      return BigInt(1);
-    } else {
-      let a = BigInt(0);
-      let b = BigInt(1);
-      let c;
-      for (let i = 2; i <= n; i++) {
-        c = a + b;
-        a = b;
-        b = c;
-      }
-      return c;
-    }
-  }
-
-  function compare(x) {
-    return function(y) {
-      if(y > x) {
-        return true;
-      } else if(y < x) {
-        return false;
-      } else {
-        return null;
-      }
-    }
-  }
-
-  function sum(...args) {
-    return args.reduce((total, current) => total + current, 0);
-  }
+    return result;
+}
