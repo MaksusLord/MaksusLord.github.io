@@ -18,7 +18,6 @@ function z1() {
 }
 
 function z2() {
-  let n = prompt("Введите число:");
   function sumTo(n) {
     if (n === 1) {
       return 1;
@@ -27,11 +26,10 @@ function z2() {
     }
   }
   
-  alert("Сумма:"sumTo(n));
+  alert(sumTo(n));
 }
 
 function z3() {
-  let n = prompt("Введите число:");
   function factorial(n) {
     if (n === 0) {
       return 1n;
