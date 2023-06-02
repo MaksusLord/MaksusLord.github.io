@@ -1,3 +1,6 @@
+"use strict";
+function vozrast_pol() {
+    let age,gender;
 let age = prompt("Введите ваш возраст:");
 let gender = prompt("Введите ваш пол (мужской или женский):");
 
@@ -11,4 +14,5 @@ if (age >= 0 && age <= 17) {
   alert("Вам пора на пенсию");
 } else {
   alert("Да кто ты такой?");
+}
 }
