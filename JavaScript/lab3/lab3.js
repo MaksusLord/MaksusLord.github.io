@@ -2,11 +2,11 @@
 
 import { fib } from './lab2.js';
 
-function getDecimal(num) {
+export function getDecimal(num) {
   return Math.abs(num - Math.trunc(num));
 }
 
-function ucFirst(str) {
+export function ucFirst(str) {
   if (!str) {
     return '';
   }
@@ -14,11 +14,11 @@ function ucFirst(str) {
   return str[0].toUpperCase() + str.slice(1);
 }
 
-function checkSpam(str) {
+export function checkSpam(str) {
   return str.toLowerCase().includes('viagra') || str.toLowerCase().includes('xxx');
 }
 
-function truncate(str, maxlength) {
+export function truncate(str, maxlength) {
   if (str.length <= maxlength) {
     return str;
   }
@@ -26,11 +26,11 @@ function truncate(str, maxlength) {
   return str.slice(0, maxlength - 1) + '…';
 }
 
-function camelize(str) {
+export function camelize(str) {
   return str.split('-').map((word, index) => index === 0 ? word : ucFirst(word)).join('');
 }
 
-function fibs(n) {
+export function fibs(n) {
   let arr = [];
 
   for (let i = 0; i < n; i++) {
@@ -40,11 +40,11 @@ function fibs(n) {
   return arr;
 }
 
-function arrReverseSorted(arr) {
+export function arrReverseSorted(arr) {
   return arr.slice().sort((a, b) => b - a);
 }
 
 
-function unique(arr) {
+export function unique(arr) {
   return [...new Set(arr)];
 }
