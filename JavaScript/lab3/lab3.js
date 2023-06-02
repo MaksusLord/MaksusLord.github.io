@@ -3,48 +3,54 @@
 import { fib } from './lab2.js';
 
 export function getDecimal(num) {
-  return Math.abs(num - Math.trunc(num));
-}
-
-export function ucFirst(str) {
-  if (!str) {
-    return '';
+  if (Math.trunc(num) == num) {
+      return 0;
   }
-
-  return str[0].toUpperCase() + str.slice(1);
-}
-
-export function checkSpam(str) {
-  return str.toLowerCase().includes('viagra') || str.toLowerCase().includes('xxx');
-}
-
-export function truncate(str, maxlength) {
-  if (str.length <= maxlength) {
-    return str;
+  else if (num < 0) {
+      return num - (-Math.ceil(-num));
   }
-
-  return str.slice(0, maxlength - 1) + '…';
+  if (num > 1) {
+      return +(num - Math.trunc(num)).toFixed(2);
+  }
 }
 
-export function camelize(str) {
-  return str.split('-').map((word, index) => index === 0 ? word : ucFirst(word)).join('');
+export function ucFirst(str){
+  if (!str) return str;
+      return str[0].toUpperCase() + str.slice(1);
 }
 
-export function fibs(n) {
+export function checkSpam(str){
+  let lowerStr = str.toLowerCase();
+return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
+
+export function  truncate(str, maxlength){
+  return (str.length > maxlength) ?
+  str.slice(0, maxlength - 1) + '…' : str;
+}
+
+export function  camelize(str){
+  let STR = str.split("-");
+  let StrNew = "";
+  for (let i = 0; i <= STR.length - 1; i++) {
+      if (i == 0) StrNew = STR[0];
+      else StrNew += ucFirst(STR[i]);
+  }
+  return StrNew;
+}
+
+export function  fibs(n){
   let arr = [];
-
-  for (let i = 0; i < n; i++) {
-    arr.push(fib(i));
-  }
-
+  for (let i = 0; i < n; i++) arr.push(fib(i));
   return arr;
 }
 
-export function arrReverseSorted(arr) {
-  return arr.slice().sort((a, b) => b - a);
+export function  arrReverseSorted(arr){
+  return arr.sort(function (a, b) {
+      return b - a;
+  })
 }
 
-
-export function unique(arr) {
-  return [...new Set(arr)];
+export function  unique(arr){
+  return Array.from(new Set(arr));
 }
