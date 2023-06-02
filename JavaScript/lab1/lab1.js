@@ -40,22 +40,24 @@ function number() {
 }
 
 function simple() {
-    let n = prompt("Введите число:");
-
-    for (let i = 2; i <= n; i++) {
-      let isPrime = true;
     
-      for (let j = 2; j < i; j++) {
-        if (i % j === 0) {
-          isPrime = false;
-          break;
-        }
+  let num=prompt("Введите число");
+  let k;
+  var lst=[];
+  for( let i = 2;  i<=num; i++)
+  {
+      k=0
+      for (let j=2; j<i; j++)
+      {
+          if (i%j==0) k+=1;
       }
-    
-      if (isPrime) {
-        console.log(i);
+      if (k==0)
+      {
+          lst.push(i)
       }
-    }
+  }
+  alert("Все простые числа до " +num+ ": " +lst);
+  
 }
 
 function cat_dog() {
