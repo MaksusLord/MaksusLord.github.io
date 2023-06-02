@@ -17,10 +17,9 @@ for (let prop in book1) { // вывод свойств объекта book1
 for (let prop in book2) { // вывод свойств объекта book2
   console.log(prop + ': ' + book2[prop]);
 }
-```
 
-2. Добавление метода show к объектам book1 и book2:
-```javascript
+//2. Добавление метода show к объектам book1 и book2:
+
 book1.show = function() { // добавление метода show к объекту book1
   console.log('Title: ' + this.title + ', Price: ' + this.price);
 }
@@ -79,10 +78,9 @@ obj.addClass('open'); // класс уже есть, не добавляем
 console.log(obj.className); // 'open menu new'
 obj.removeClass('menu'); // удаляем класс
 console.log(obj.className); // 'open new'
-```
 
-5. Сортировка массива объектов people по полю age:
-```javascript
+//5. Сортировка массива объектов people по полю age:
+
 let vasya = { name: "Вася", age: 23 };
 let masha = { name: "Маша", age: 18 };
 let vova = { name: "Вова", age: 12 };
@@ -91,8 +89,26 @@ let people = [vasya, masha, vova];
 people.sort((a, b) => a.age - b.age); // сортировка по возрасту
 
 console.log(people); // [{name: 'Вова', age: 12}, {name: 'Маша', age: 18}, {name: 'Вася', age: 23}]
-```
 
-6. Функция getSecondsToday для получения количества секунд с начала текущего дня:
-```javascript
-function getSecondsToday() {
+
+//6. Функция getSecondsToday для получения количества секунд с начала текущего дня:
+
+function formatDate(date) {
+
+    var dd = date.getDate();
+    if (dd < 10) dd = '0' + dd;
+  
+    var mm = date.getMonth() + 1;
+    if (mm < 10) mm = '0' + mm;
+  
+    var yy = date.getFullYear() % 100;
+    if (yy < 10) yy = '0' + yy;
+  
+    return dd + '.' + mm + '.' + yy;
+  }
+  
+  var d = new Date(2003, 08, 29); // 29 Сент 2003
+  console.log( formatDate(d) ); // '29.09.03'
+  let now = new Date();
+let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+console.log(`Сегодня ${formatDate(today)}`)
