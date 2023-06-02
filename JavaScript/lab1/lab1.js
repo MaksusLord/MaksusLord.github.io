@@ -59,8 +59,11 @@ for (let i = 2; i <= n; i++) {
 }
 
 function cat_dog() {
+
     let numRows = prompt("Введите количество строк:");
+
     let row = "";
+
     for (let i = 0; i < numRows; i++) {
       row += "dog\t";
       row += "dog\t";
@@ -90,5 +93,7 @@ function cat_dog() {
       row += "dog\t";
       row += "dog\t\n";
     }
+
     console.log(row);
+    
 }
