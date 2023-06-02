@@ -59,9 +59,36 @@ function simple() {
 }
 
 function cat_dog() {
-  var foo = {baz: "tubular", goo: "rad"}, bar = "baz";
-  console.log(
-       "%s theory is %d %s concept. I can only describe it as %s and %s",
-        "string", 1, foo.goo, bar, foo.baz 
-  );
+    let numRows = prompt("Введите количество строк:");
+    let row = "";
+    for (let i = 0; i < numRows; i++) {
+      row += "dog\t";
+      row += "dog\t";
+      row += "dog\t";
+      row += "cat\t";
+      row += "cat\t";
+      row += "dog\t\n";
+    
+      row += "dog\t";
+      row += "dog\t";
+      row += "cat\t";
+      row += "cat\t";
+      row += "dog\t";
+      row += "dog\t\n";
+    
+      row += "dog\t";
+      row += "cat\t";
+      row += "cat\t";
+      row += "dog\t";
+      row += "dog\t";
+      row += "dog\t\n";
+    
+      row += "cat\t";
+      row += "cat\t";
+      row += "dog\t";
+      row += "dog\t";
+      row += "dog\t";
+      row += "dog\t\n";
+    }
+    console.log(row);
 }
