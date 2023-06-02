@@ -27,7 +27,7 @@ function z2() {
     }
   }
   
-  alert(sumTo(n));
+  alert("Сумма:"sumTo(n));
 }
 
 function z3() {
