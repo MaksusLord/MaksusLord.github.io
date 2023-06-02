@@ -1,54 +1,37 @@
-
-let book1 = {}; // создание пустого объекта
-book1.title = 'Book One';
-book1.pubYear = 2021;
-book1.price = 10.99;
-
-let book2 = { // создание объекта с заданными свойствами
-  title: 'Book Two',
-  pubYear: 2022,
-  price: 12.99
-};
-
-for (let prop in book1) { // вывод свойств объекта book1
-  console.log(prop + ': ' + book1[prop]);
-}
-
-for (let prop in book2) { // вывод свойств объекта book2
-  console.log(prop + ': ' + book2[prop]);
-}
-
-//2. Добавление метода show к объектам book1 и book2:
-
-book1.show = function() { // добавление метода show к объекту book1
-  console.log('Title: ' + this.title + ', Price: ' + this.price);
-}
-
-function showBook() { // объявление функции showBook()
-  console.log('Title: ' + this.title + ', Price: ' + this.price);
-}
-
-book2.show = showBook; // добавление метода show к объекту book2
-
-book1.show(); // вызов метода show() у объекта book1
-book2.show(); // вызов метода show() у объекта book2
-
-//3. Функция isEmpty для проверки наличия свойств в объекте:
-
-
-function isEmpty(obj) {
-  for (let prop in obj) {
-    return false; // если хоть одно свойство есть, вернуть false
-  }
-  return true; // если свойств нет, вернуть true
-}
-
-console.log(isEmpty(book1)); // false
-console.log(isEmpty(book2)); // false
+// 1-3
+function endBook {
+"use strict";
+    function isEmpty(obj) {
+      return obj.hasOwnProperty()
+    }
+    let book1 = new Object(); // синтаксис "конструктор объекта"
+    book1 = {
+      title: "13 drygalei oyshena",
+      pubYear: 2009,
+      price: 2847,
+      show: function () {
+        console.log(this.title);
+        console.log(this.price);
+      }
+    };
+    console.log(isEmpty(book1));
+    let book2 = new Object();
+    book2.title = '10 negritat';
+    book2.pubYear = 1908;
+    book2.price = 200;
+    for (let i in book2) console.log(book2[i]);
+    console.log(isEmpty(book2));
+    book1.show();
+    book2.show = function showBook() {
+      console.log(this.title);
+      console.log(this.price);
+    }
+    book2.show();
+} 
 
 //4. Методы addClass и removeClass для объекта obj:
 
-
+    function className {
 let obj = {
   className: 'open menu'
 };
@@ -79,8 +62,10 @@ console.log(obj.className); // 'open menu new'
 obj.removeClass('menu'); // удаляем класс
 console.log(obj.className); // 'open new'
 
-//5. Сортировка массива объектов people по полю age:
+    }
 
+//5. Сортировка массива объектов people по полю age:
+function people_age {
 let vasya = { name: "Вася", age: 23 };
 let masha = { name: "Маша", age: 18 };
 let vova = { name: "Вова", age: 12 };
@@ -89,11 +74,11 @@ let people = [vasya, masha, vova];
 people.sort((a, b) => a.age - b.age); // сортировка по возрасту
 
 console.log(people); // [{name: 'Вова', age: 12}, {name: 'Маша', age: 18}, {name: 'Вася', age: 23}]
-
+}
 
 //6. Функция getSecondsToday для получения количества секунд с начала текущего дня:
 
-function formatDate(date) {
+function getDate(date) {
 
     var dd = date.getDate();
     if (dd < 10) dd = '0' + dd;
@@ -106,9 +91,11 @@ function formatDate(date) {
   
     return dd + '.' + mm + '.' + yy;
   }
-  
+  // 7
+  function formatDate(){
   var d = new Date(2003, 08, 29); // 29 Сент 2003
   console.log( formatDate(d) ); // '29.09.03'
   let now = new Date();
 let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 console.log(`Сегодня ${formatDate(today)}`)
+}
