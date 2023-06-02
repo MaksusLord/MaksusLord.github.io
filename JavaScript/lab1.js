@@ -16,3 +16,9 @@ if (age >= 0 && age <= 17) {
   alert("Да кто ты такой?");
 }
 }
+
+function vozrast_pol() {
+
+
+    
+}
