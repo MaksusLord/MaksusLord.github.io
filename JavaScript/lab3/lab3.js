@@ -1,61 +1,75 @@
 "use strict";
 
-function pow(x, n) {
-    if (n==0){ return 1
-    } else if (n>0){
-        for(let i=1; i<n; i++){
-           x*=x
-        }
-        return x
-    }else return 1 / pow(x, -n);
+function getDecimal(num) {
+  return Math.abs(num - Math.trunc(num));
+}
+
+alert(getDecimal(1.23));
+alert(getDecimal(-1.23));
+alert(getDecimal(1));
+
+
+function ucFirst(str) {
+  if (!str) {
+    return '';
   }
 
-  function sumTo(n) {
-    if (n == 1) {
-      return 1;
-    } else {
-      return n + sumTo(n-1);
-    }
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+alert(ucFirst(''));
+alert(ucFirst('привет'));
+
+
+function checkSpam(str) {
+  return str.toLowerCase().includes('viagra') || str.toLowerCase().includes('xxx');
+}
+
+alert(checkSpam('_XxX_'));
+alert(checkSpam('__Viagra__'));
+alert(checkSpam('test'));
+
+
+function truncate(str, maxlength) {
+  if (str.length <= maxlength) {
+    return str;
   }
 
-  function factorial(n) {
-    if (n === 0 || n === 1) {
-      return BigInt(1);
-    } else {
-      return BigInt(n) * factorial(n - 1);
-    }
+  return str.slice(0, maxlength - 1) + '…';
+}
+
+alert(truncate('Мама мыла раму.', 100));
+alert(truncate('Мама мыла раму.', 10));
+
+function camelize(str) {
+  return str.split('-').map((word, index) => index === 0 ? word : ucFirst(word)).join('');
+}
+
+alert(camelize('var-test-text'));
+
+import { fib } from './lab2.js';
+
+function fibs(n) {
+  let arr = [];
+
+  for (let i = 0; i < n; i++) {
+    arr.push(fib(i));
   }
 
-  function fib(n) {
-    if (n === 0) {
-      return BigInt(0);
-    } else if (n === 1) {
-      return BigInt(1);
-    } else {
-      let a = BigInt(0);
-      let b = BigInt(1);
-      let c;
-      for (let i = 2; i <= n; i++) {
-        c = a + b;
-        a = b;
-        b = c;
-      }
-      return c;
-    }
-  }
+  return arr;
+}
 
-  function compare(x) {
-    return function(y) {
-      if(y > x) {
-        return true;
-      } else if(y < x) {
-        return false;
-      } else {
-        return null;
-      }
-    }
-  }
+alert(fibs(5));
 
-  function sum(...args) {
-    return args.reduce((total, current) => total + current, 0);
-  }
+function arrReverseSorted(arr) {
+  return arr.slice().sort((a, b) => b - a);
+}
+
+alert(arrReverseSorted([1, 3, 2]));
+
+function unique(arr) {
+  return [...new Set(arr)];
+}
+
+alert(unique([0, 1, 1, 2]));
+alert(unique(['a', 'b', 'c', 'c']));
