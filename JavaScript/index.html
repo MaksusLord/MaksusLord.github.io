@@ -7,7 +7,7 @@
 <style>
 body{
     display: grid;
-    grid-template-columns: [one] 220px [two] 300px;
+    grid-template-columns: [one] 220px;
     grid-template-rows: 1fr;
     column-gap: 10px;
 }
@@ -18,18 +18,12 @@ body{
     font-size: 30px;
     padding: 10px 10px 10px 10px;   
 }
-#WEB{
-    padding: 10px 10px 10px 10px;
-	  background:rgb(213, 110, 253);
-    width: 200px;
-    grid-column-start: 1;
-    grid-column-end: two;      
-}
+
 #JS{
     padding: 10px 10px 10px 10px;
 	background:rgb(148, 255, 148);
     width: 200px;
-    grid-column-start: two;
+    grid-column-start: one;
     grid-column-end: three;   
 }
 </style>
