@@ -59,41 +59,17 @@ function simple() {
 }
 
 function cat_dog() {
-
-    let numRows = prompt("Введите количество строк:");
-
-    let row = "";
-
-    for (let i = 0; i < numRows; i++) {
-      row += "dog\t";
-      row += "dog\t";
-      row += "dog\t";
-      row += "cat\t";
-      row += "cat\t";
-      row += "dog\t\n";
-    
-      row += "dog\t";
-      row += "dog\t";
-      row += "cat\t";
-      row += "cat\t";
-      row += "dog\t";
-      row += "dog\t\n";
-    
-      row += "dog\t";
-      row += "cat\t";
-      row += "cat\t";
-      row += "dog\t";
-      row += "dog\t";
-      row += "dog\t\n";
-    
-      row += "cat\t";
-      row += "cat\t";
-      row += "dog\t";
-      row += "dog\t";
-      row += "dog\t";
-      row += "dog\t\n";
-    }
-
-    console.log(row);
-
+  let num = prompt("Введите количество строк: ");
+  let k = Math.floor(num / 5);
+  let l = num - 5 * k;
+  let one = "dog dog dog cat cat dog";
+  let two = "dog dog cat cat dog dog";
+  let three = "dog cat cat dog dog dog";
+  let four = "cat cat dog dog dog dog";
+  let five = "cat dog dog dog dog cat";
+  var list = [one, two, three, four, five]
+  for (let i = 1; i <= k; i++) {
+      for (let j = 0; j < 5; j++) console.log(list[j]);
+  }
+  for (let j = 0; j < l; j++) console.log(list[j]);
 }
