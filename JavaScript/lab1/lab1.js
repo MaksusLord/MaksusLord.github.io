@@ -65,7 +65,7 @@ function number() {
         number = prompt("Вы не ввели число", "");
       } while (Number(number) != number);
     }
-    else {
+    else if(number == null) {
       alert("Вы отменили ввод.");
       stop;
     }
