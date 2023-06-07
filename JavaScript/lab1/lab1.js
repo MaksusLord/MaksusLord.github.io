@@ -64,33 +64,33 @@ function number() {
       do {
         number = prompt("Вы не ввели число", "");
       } while (Number(number) != number);
-  } while (number <= 100 && number != null);
-  if (number !== null) {
-    alert("Спасибо, вы ввели число больше 100: " + number);
-  } else {
-    alert("Вы отменили ввод.");
-  }
-
+    }
+    } while (number <= 100 && number != null);
+    if (number !== null) {
+      alert("Спасибо, вы ввели число больше 100: " + number);
+    } else {
+      alert("Вы отменили ввод.");
+    }
   }
 
   function simple() {
-    let n = prompt("Введите число:");
+      let n = prompt("Введите число:");
 
-    for (let i = 2; i <= n; i++) {
-      let isPrime = true;
+      for (let i = 2; i <= n; i++) {
+        let isPrime = true;
 
-      for (let j = 2; j < i; j++) {
-        if (i % j === 0) {
-          isPrime = false;
-          break;
+        for (let j = 2; j < i; j++) {
+          if (i % j === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+
+        if (isPrime) {
+          console.log(i);
         }
       }
-
-      if (isPrime) {
-        console.log(i);
-      }
     }
-  }
 
   function cat_dog() {
     let num = prompt("Введите количество строк: ");
