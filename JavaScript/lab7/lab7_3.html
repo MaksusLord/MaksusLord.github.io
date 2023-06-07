@@ -2,7 +2,9 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Lab7_3</title>
 </head>
 
@@ -11,9 +13,10 @@
 	<div id="divv"><cite>Нажми Ctrl+E и введи текст...</cite></div>
 
 	<script>
-		"use strict";
+        "use strict";
         area.hidden = true;
-		document.onkeydown = function (e) {
+
+        document.onkeydown = function (e) {
             if (e.ctrlKey && e.keyCode == '69') {
                 divv.hidden = true;
                 area.hidden = false;
@@ -21,6 +24,7 @@
                 area.innerHTML = divv.innerHTML;
                 return false;
             }
+
             if (e.ctrlKey && e.keyCode == '83') {
                 divv.hidden = false;
                 area.hidden = true;
@@ -30,11 +34,9 @@
                 divv.hidden = false;
                 area.hidden = true;
             }
+        };
 
-	
-		});
-
-	</script>
+    </script>
 </body>
 
 </html>
