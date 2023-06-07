@@ -62,12 +62,12 @@ function number() {
     number = prompt("Введите число больше 100:", "");
   } while (number <= 100 && number != null);
   
-  do {
-    number = prompt("Введите число больше 100:", "");
-  } while (number <= 100 && Number(number) != number);
+
 
   if (Number(number) != number) {
-    alert("Вы не ввели число");
+      do {
+      number = prompt("Вы не ввели число", "");
+    } while (Number(number) != number);
   } else if (number !== null) {
     alert("Спасибо, вы ввели число больше 100: " + number);
   } else {
