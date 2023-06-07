@@ -8,41 +8,32 @@
 </head>
 <body>
     <script>
-    "use strict"
+    "use strict"; 
 let obj = {
-    className: 'open menu'
-}
+    className: 'open menu',
 
-obj.addClass = function addClass(cls) {
-    let arr = this.className.split(" ");
-    if (!arr.includes(cls)) {
-        arr.push(cls)
+    addClass(cls) {
+      let classes = this.className.split(' ');
+      if (!classes.includes(cls)) {
+        classes.push(cls);
+        this.className = classes.join(' ');
+      }
+      return this;
+    },
+  
+    removeClass(cls) {
+      let classes = this.className.split(' ');
+      let index = classes.indexOf(cls);
+      if (index !== -1) {
+        classes.splice(index, 1);
+        this.className = classes.join(' ');
+      }
+      return this;
     }
-    this.className = arr.join(" ");// присваеваем свойству объекта, новый список классов.
-}
-
-obj.addClass('NEW'); // open menu new
-obj.addClass('/(*-*)/'); // open menu new Zdravstvyite
-obj.addClass('open');  // без изменений 
-
-console.log(obj.className);
-
-obj.removeClass = function removeClass(cls) {
-    let arr = this.className.split(" ");
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] == cls) {
-            arr.splice(i, 1);
-            i--;
-        }
-    }
-    obj.className = arr.join(' ');
-}
-
-obj.removeClass('//-_-//'); // без изменений
-obj.removeClass('NEW'); // open menu Zdravstvyite
-obj.removeClass('open'); // menu Zdravstvyite
-
-console.log(obj.className);
+};
+ console.log( obj.addClass('new')); 
+ console.log(obj.removeClass('(-_-)?')); 
+ console.log(obj.removeClass('menu'));
     </script>
 </body>
 </html>
