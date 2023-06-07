@@ -62,51 +62,50 @@ function number() {
     number = prompt("Введите число больше 100:", "");
     if (Number(number) != number) {
       do {
-      number = prompt("Вы не ввели число", "");
-    } while (Number(number) != number);
-  } else if (number !== null) {
-    alert("Спасибо, вы ввели число больше 100: " + number);
-  } else {
-    alert("Вы отменили ввод.");
-  }
+        number = prompt("Вы не ввели число", "");
+      } while (Number(number) != number);
+    } else {
+      alert("Вы отменили ввод.");
+    }
   } while (number <= 100 && number != null);
-  
+  if (number !== null) {
+    alert("Спасибо, вы ввели число больше 100: " + number);
 
 
 
-}
+  }
 
-function simple() {
-  let n = prompt("Введите число:");
+  function simple() {
+    let n = prompt("Введите число:");
 
-  for (let i = 2; i <= n; i++) {
-    let isPrime = true;
+    for (let i = 2; i <= n; i++) {
+      let isPrime = true;
 
-    for (let j = 2; j < i; j++) {
-      if (i % j === 0) {
-        isPrime = false;
-        break;
+      for (let j = 2; j < i; j++) {
+        if (i % j === 0) {
+          isPrime = false;
+          break;
+        }
+      }
+
+      if (isPrime) {
+        console.log(i);
       }
     }
+  }
 
-    if (isPrime) {
-      console.log(i);
+  function cat_dog() {
+    let num = prompt("Введите количество строк: ");
+    let k = Math.floor(num / 5);
+    let l = num - 5 * k;
+    const one = "dog dog dog cat cat dog";
+    const two = "dog dog cat cat dog dog";
+    const three = "dog cat cat dog dog dog";
+    const four = "cat cat dog dog dog dog";
+    const five = "cat dog dog dog dog cat";
+    var list = [one, two, three, four, five]
+    for (let i = 1; i <= k; i++) {
+      for (let j = 0; j < 5; j++) console.log(list[j]);
     }
+    for (let j = 0; j < l; j++) console.log(list[j]);
   }
-}
-
-function cat_dog() {
-  let num = prompt("Введите количество строк: ");
-  let k = Math.floor(num / 5);
-  let l = num - 5 * k;
-  const one = "dog dog dog cat cat dog";
-  const two = "dog dog cat cat dog dog";
-  const three = "dog cat cat dog dog dog";
-  const four = "cat cat dog dog dog dog";
-  const five = "cat dog dog dog dog cat";
-  var list = [one, two, three, four, five]
-  for (let i = 1; i <= k; i++) {
-    for (let j = 0; j < 5; j++) console.log(list[j]);
-  }
-  for (let j = 0; j < l; j++) console.log(list[j]);
-}
