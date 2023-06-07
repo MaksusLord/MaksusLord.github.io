@@ -60,16 +60,15 @@ function number() {
 
   do {
     number = prompt("Введите число больше 100:", "");
-    if (Number(number) != number) {
-      alert("Вы ввели не число");
-    } else if (number !== null) {
-      alert("Спасибо, вы ввели число больше 100: " + number);
-    } else {
-      alert("Вы отменили ввод.");
-    }
    
   } while (number <= 100 && number != null);
-  
+  if (Number(number) != number) {
+    alert("Вы ввели не число");
+  } else if (number !== null) {
+    alert("Спасибо, вы ввели число больше 100: " + number);
+  } else {
+    alert("Вы отменили ввод.");
+  }
 }
 
 function simple() {
