@@ -10,18 +10,16 @@
 	<div>Нажми Ctrl+E и введи текст...</div>
 
 	<script>
-		'use strict';
-		let text;
-		Lab7_3.addEventListener('keydown', function (event) {
-			if (event.code == 'KeyE' && (event.ctrlKey || event.metaKey)) {
-				event.preventDefault();
-				let textarea = document.createElement("textarea");
-				let div = document.querySelector("div");
-				text = div.innerHTML;
-				textarea.value = div.innerHTML;
-				div.parentNode.replaceChild(textarea, div);
-				textarea.focus();
-			}
+		"use strict";
+        area.hidden = true;
+		document.onkeydown = function (e) {
+            if (e.ctrlKey && e.keyCode == '69') {
+                divv.hidden = true;
+                area.hidden = false;
+                area.focus()
+                area.innerHTML = divv.innerHTML;
+                return false;
+            }
             if (e.ctrlKey && e.keyCode == '83') {
                 divv.hidden = false;
                 area.hidden = true;
