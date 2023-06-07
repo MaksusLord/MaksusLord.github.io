@@ -8,8 +8,15 @@
  */
 
 function pow(x, n) {
-    return x ** n;
-}
+    /*return x**n;*/
+    if (n==0){ return 1
+    } else if (n>0){
+        for(let i=1; i<n; i++){
+           x*=x
+        }
+        return x
+    }else return 1 / pow(x, -n);
+  }
 
 /**
  * вычисляет сумму чисел от 1 до n включительно
@@ -17,10 +24,13 @@ function pow(x, n) {
  * @returns {number} - сумму всех чисел от n до 1 
  */
 
-function sumTo(n) {
-    return (n * (n + 1)) / 2;
-
-}
+  function sumTo(n) {
+    if (n == 1) {
+      return 1;
+    } else {
+      return n + sumTo(n-1);
+    }
+  }
 
 /**
  * возвращает факториал числа n!
@@ -28,14 +38,13 @@ function sumTo(n) {
  * @returns {BigInt} - Факториал заданного числа в виде BigInt
  */
 
-function factorial(n) {
+  function factorial(n) {
     if (n === 0 || n === 1) {
-        return BigInt(1);
+      return BigInt(1);
     } else {
-        return BigInt(n) * factorial(n - 1);
+      return BigInt(n) * factorial(n - 1);
     }
-}
-
+  }
 
 /**
  * возвращает n-е число Фибоначчи
@@ -43,23 +52,23 @@ function factorial(n) {
  * @returns  {BigInt} - n-е число Фибоначчи в виде BigInt
  */
 
-function fib(n) {
+  function fib(n) {
     if (n === 0) {
-        return BigInt(0);
+      return BigInt(0);
     } else if (n === 1) {
-        return BigInt(1);
+      return BigInt(1);
     } else {
-        let a = BigInt(0);
-        let b = BigInt(1);
-        let c;
-        for (let i = 2; i <= n; i++) {
-            c = a + b;
-            a = b;
-            b = c;
-        }
-        return c;
+      let a = BigInt(0);
+      let b = BigInt(1);
+      let c;
+      for (let i = 2; i <= n; i++) {
+        c = a + b;
+        a = b;
+        b = c;
+      }
+      return c;
     }
-}
+  }
 
 /**
  * принимает целочисленное значение x и возвращает анонимную функцию
@@ -67,13 +76,17 @@ function fib(n) {
  * @returns {function} -  функция, которая принимает входное значение и возвращает логическое значение
  */
 
-function compare(x) {
-    return function (y) {
-        if (y > x) return true;
-        else if (y < x) return false;
-        else if (y == x) return null;
+  function compare(x) {
+    return function(y) {
+      if(y > x) {
+        return true;
+      } else if(y < x) {
+        return false;
+      } else {
+        return null;
+      }
     }
-}
+  }
 
 /**
  * возвращает сумму всех своих аргументов
@@ -81,10 +94,6 @@ function compare(x) {
  * @returns {number} -  общая сумма всех аргументов
  */
 
-function sum() {
-    var result = 0;
-    for (var i = 0; i < arguments.length; i++) {
-        result += arguments[i]
-    }
-    return result;
-}
+  function sum(...args) {
+    return args.reduce((total, current) => total + current, 0);
+  }
