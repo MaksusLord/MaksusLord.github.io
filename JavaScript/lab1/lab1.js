@@ -62,7 +62,7 @@ function number() {
     if (num === null) return; 
     number = prompt("Введите число больше 100:", "");
     if (Number(number) != number) continue;
-    
+
   } while (number <= 100);
   if (number !== null) {
     alert("Спасибо, вы ввели число больше 100: " + number);
