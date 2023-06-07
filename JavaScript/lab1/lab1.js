@@ -20,38 +20,38 @@ function vozrast_pol() {
 function crow() {
   let num = prompt("Введите целое число", "");
   if (num % 100 >= 11 && num % 100 <= 14) {
-      switch (num % 100) {
-          case 11:
-          case 12:
-          case 13:
-          case 14:
-              alert(`На ветке сидит ${num} ворон`)
-              break;
-      }
+    switch (num % 100) {
+      case 11:
+      case 12:
+      case 13:
+      case 14:
+        alert(`На ветке сидит ${num} ворон`)
+        break;
+    }
   }
   else {
-      switch (num % 10) {
-          case 0:
-              alert(`На ветке сидит ${num} ворон`)
-              break;
-          case 1:
-              alert(`На ветке сидит ${num} ворона`)
-              break;
-          case 2:
-          case 3:
-          case 4:
-              alert(`На ветке сидит ${num} вороны`)
-              break;
-          case 5:
-          case 6:
-          case 7:
-          case 9:
-              alert(`На ветке сидит ${num} ворон`)
-              break;
-          default:
-              alert(`Число нецелое или это не число`)
-              break;
-      }
+    switch (num % 10) {
+      case 0:
+        alert(`На ветке сидит ${num} ворон`)
+        break;
+      case 1:
+        alert(`На ветке сидит ${num} ворона`)
+        break;
+      case 2:
+      case 3:
+      case 4:
+        alert(`На ветке сидит ${num} вороны`)
+        break;
+      case 5:
+      case 6:
+      case 7:
+      case 9:
+        alert(`На ветке сидит ${num} ворон`)
+        break;
+      default:
+        alert(`Число нецелое или это не число`)
+        break;
+    }
   }
 }
 
@@ -60,11 +60,9 @@ function number() {
 
   do {
     number = prompt("Введите число больше 100:", "");
-   
   } while (number <= 100 && number != null);
-  if (Number(number) != number) {
-    alert("Вы не ввели число");
-  } else if (number !== null) {
+
+  if (number !== null) {
     alert("Спасибо, вы ввели число больше 100: " + number);
   } else {
     alert("Вы отменили ввод.");
@@ -72,17 +70,17 @@ function number() {
 }
 
 function simple() {
-    let n = prompt("Введите число:");
+  let n = prompt("Введите число:");
 
-    for (let i = 2; i <= n; i++) {
-      let isPrime = true;
+  for (let i = 2; i <= n; i++) {
+    let isPrime = true;
 
-      for (let j = 2; j < i; j++) {
-        if (i % j === 0) {
-          isPrime = false;
-          break;
-        }
+    for (let j = 2; j < i; j++) {
+      if (i % j === 0) {
+        isPrime = false;
+        break;
       }
+    }
 
     if (isPrime) {
       console.log(i);
@@ -101,7 +99,7 @@ function cat_dog() {
   let five = "cat dog dog dog dog cat";
   var list = [one, two, three, four, five]
   for (let i = 1; i <= k; i++) {
-      for (let j = 0; j < 5; j++) console.log(list[j]);
+    for (let j = 0; j < 5; j++) console.log(list[j]);
   }
   for (let j = 0; j < l; j++) console.log(list[j]);
 }
