@@ -22,15 +22,15 @@
 				div.parentNode.replaceChild(textarea, div);
 				textarea.focus();
 			}
-			else if (event.code == 'KeyS' && (event.ctrlKey || event.metaKey)) {
+			if (event.code == 'KeyS' && (event.ctrlKey || event.metaKey)) {
 				event.preventDefault();
 				let textarea = document.querySelector("textarea");
 				let div = document.createElement("div");
-				text = div.innerHTML;
+	
 				div.innerHTML = textarea.value;
 				textarea.parentNode.replaceChild(div, textarea);
 			}
-			else if (event.code == 'Escape') {
+			if (event.code == 'Escape') {
 				event.preventDefault();
 				let textarea = document.querySelector("textarea");
 				let div = document.createElement("div");
