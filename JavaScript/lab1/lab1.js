@@ -60,11 +60,7 @@ function number() {
 
   do {
     number = prompt("Введите число больше 100:", "");
-  } while (number <= 100 && number != null);
-  
-
-
-  if (Number(number) != number) {
+    if (Number(number) != number) {
       do {
       number = prompt("Вы не ввели число", "");
     } while (Number(number) != number);
@@ -73,6 +69,11 @@ function number() {
   } else {
     alert("Вы отменили ввод.");
   }
+  } while (number <= 100 && number != null);
+  
+
+
+
 }
 
 function simple() {
