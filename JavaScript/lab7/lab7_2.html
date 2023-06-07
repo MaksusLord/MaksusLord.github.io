@@ -30,7 +30,7 @@ let div = document.querySelector('div');
 input.value = input.getAttribute('placeholder');
 
 input.onfocus = function () {
-div.innerHTML = input.getAttribute('placeholder');
+div.innerHTML = input.getAttribute('data.placeholder');
 input.setAttribute('placeholder', '');//при фокусировке на поле ввода, добавляется текст, указанный в атрибуте placeholder, внутрь div, а сам атрибут удаляется, чтобы текст внутри поля ввода и div совпадал
 input.value = '';
 };
