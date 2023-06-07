@@ -70,7 +70,8 @@ function number() {
   } while (number <= 100 && number != null);
   if (number !== null) {
     alert("Спасибо, вы ввели число больше 100: " + number);
-
+  } else {
+    alert("Вы отменили ввод.");
 
 
   }
