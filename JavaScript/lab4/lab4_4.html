@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Задания 4</title>
 </head>
+
 <body>
     <script>
-    "use strict"; 
-let obj = {
-    className: 'open menu',
+        "use strict"
+        let obj = {
+            className: 'open menu',
 
-    addClass(cls) {
-      let classes = this.className.split(' ');
-      if (!classes.includes(cls)) {
-        classes.push(cls);
-        this.className = classes.join(' ');
-      }
-      return this;
-    },
-  
-    removeClass(cls) {
-      let classes = this.className.split(' ');
-      let index = classes.indexOf(cls);
-      if (index !== -1) {
-        classes.splice(index, 1);
-        this.className = classes.join(' ');
-      }
-      return this;
-    }
-};
- console.log( obj.addClass('new')); 
- console.log(obj.removeClass('(-_-)?')); 
- console.log(obj.removeClass('menu'));
+            addClass(cls) {
+                let classes = this.className.split(' ');
+                if (!classes.includes(cls)) {
+                    classes.push(cls);
+                    this.className = classes.join(' ');
+                }
+                return this;
+            },
+
+            removeClass(cls) {
+                let classes = this.className.split(' ');
+                let index = classes.indexOf(cls);
+                if (index !== -1) {
+                    classes.splice(index, 1);
+                    this.className = classes.join(' ');
+                }
+                return this;
+            }
+        };
+        console.log(obj.addClass('new'));
+        console.log(obj.removeClass('open'));
+        console.log(obj.removeClass('menu'))
     </script>
 </body>
+
 </html>
