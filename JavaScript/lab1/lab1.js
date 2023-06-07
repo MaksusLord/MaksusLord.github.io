@@ -59,8 +59,9 @@ function number() {
   let number;
 
   do {
-    if (num === null) return; 
+
     number = prompt("Введите число больше 100:", "");
+    if (num === null) return;
     if (Number(number) != number) continue;
 
   } while (number <= 100);
