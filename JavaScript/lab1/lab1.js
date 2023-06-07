@@ -64,7 +64,6 @@ function number() {
       if (num === null) return; // выход из функции, если нажали "Отмена"
       if (num === '') continue; // продолжаем цикл, если введена пустая строка
   } while (num <= 100 ||  isNaN(num));
-  alert(num);
   return ('Вы ввели ', num, '> 100');
 }
 
