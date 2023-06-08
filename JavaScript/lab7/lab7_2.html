@@ -1,39 +1,56 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Placeholder Demo</title>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title> placeholder</title>
     <style>
-      .placeholder {
-        color: blue;
-      }
-      .placeholder-label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        pointer-events: none;
-        padding: 5px;
-        color: blue;
-        opacity: 0.5;
-        transition: all 0.2s ease-out;
-        transform-origin: top left;
-      }
-      .input-container {
-        position: relative;
-        margin: 20px;
-      }
-      input:focus + .placeholder-label {
-        transform: translateY(-100%) scale(0.8);
-        opacity: 1;
-      }
-      input:not(:focus) + .placeholder-label {
-        transform: translateY(0) scale(1);
-        opacity: 0.5;
-      }
+        div {
+            color: rgb(58, 85, 241);
+        }
+
+        input {
+            color: rgb(58, 85, 241);
+        }
+
+        label {
+            color: rgb(58, 85, 241);
+        }
     </style>
-  </head>
-  <body>
-    <div class="input-container">
-      <input type="text" data-placeholder="Enter your name" />
-      <label class="placeholder-label"></label>
+</head>
+
+<body>
+
+    <div id="texfield">
+        <input id="text" type="text" class="placeholder" data-placeholder="Введите текст">
+        <label for="text"></label>
     </div>
-    <div class="input-container">
+
+    <script>
+        'use strict';
+        let tf = document.getElementById("texfield");
+
+        let input = tf.getElementsByTagName("input")[0];
+        let lb = tf.getElementsByTagName("label")[0];
+        lb.style.display = "none";
+
+        input.setAttribute("placeholder", input.dataset.placeholder);
+        lb.innerHTML = input.dataset.placeholder;
+
+        input.addEventListener("focus", function () {
+            lb.style.display = "block";
+            input.setAttribute("placeholder", "");
+        });
+
+        input.addEventListener("blur", function () {
+
+            lb.style.display = "none";
+            input.setAttribute("placeholder", input.dataset.placeholder);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
