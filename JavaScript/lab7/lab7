@@ -24,8 +24,8 @@ label{
 <body>
 	
 	<div id="texfield">
-        <label for="text"></label>
         <input id="text" type="text" class="placeholder" data-placeholder="Введите текст" >
+        <label for="text"></label>
     </div>
 
 <script>
