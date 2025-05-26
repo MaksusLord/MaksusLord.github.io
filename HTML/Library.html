@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Моя Игровая Библиотека</title>
+<style>
+/* Общие стили */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
 
+.container {
+  max-width: 1200px; /* Ширина контейнера */
+  margin: 20px auto; /* Центрирование контейнера */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Стили для сетки игр */
+.game-grid {
+  display: flex; /* Использование flexbox для расположения в ряд */
+  flex-wrap: wrap; /* Перенос на следующую строку, если не помещается */
+  justify-content: space-around; /* Равномерное распределение по горизонтали */
+}
+
+/* Стили для каждой игры */
+.game-item {
+  width: 18%; /* Примерная ширина каждого элемента (100% / 5 = 20% минус немного отступов)  Можно корректировать */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden; /* Обрезает контент, выходящий за границы */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out; /* Анимация при наведении */
+  background-color: #fff;
+}
+
+.game-item:hover {
+  transform: scale(1.05); /* Увеличение при наведении */
+}
+
+.game-item img {
+  width: 100%;
+  height: auto; /* Автоматическая высота, сохраняет пропорции */
+  display: block; /* Убирает нижний отступ у inline элементов */
+}
+
+.game-item h3 {
+  font-size: 16px;
+  margin: 10px;
+  text-align: center;
+  color: #333;
+}
+
+/* Адаптивность (пример) */
+@media (max-width: 768px) {
+  .game-grid {
+    justify-content: space-evenly; /* Больше пространства для маленьких экранов */
+  }
+  .game-item {
+    width: 45%; /* Два элемента в ряд на средних экранах */
+  }
+}
+
+@media (max-width: 480px) {
+  .game-item {
+    width: 100%; /* Один элемент в ряд на маленьких экранах */
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Библиотека</h1>
+
+  <div class="game-grid">
+    <div class="game-item">
+      <img src="Skyrim.webp" alt="The Elder Scrolls V Skyrim">
+      <h3>The Elder Scrolls V Skyrim</h3>
+    </div>
+    <div class="game-item">
+      <img src="Fallout_4.jpg" alt="Fallout 4">
+      <h3>Fallout 4</h3>
+    </div>
+    <div class="game-item">
+      <img src="Spore.webp" alt="Spore">
+      <h3>Spore</h3>
+    </div>
+    <div class="game-item">
+      <img src="FalloutNewVegas.jpg" alt="Fallout New Vegas">
+      <h3>Fallout New Vegas</h3>
+    </div>
+    <div class="game-item">
+      <img src="left4dead2.jpg" alt="Left 4 Dead 2">
+      <h3>Left 4 Dead 2</h3>
+    </div>
+    <div class="game-item">
+      <img src="POE.webp" alt="Path of Exile">
+      <h3>Path of Exile</h3>
+    </div>
+    <div class="game-item">
+      <img src="PolyBridge.webp" alt="Poly Bridge">
+      <h3>Poly Bridge</h3>
+    </div>
+    <div class="game-item">
+      <img src="left4dead.jpg" alt="Left 4 Dead">
+      <h3>Left 4 Dead</h3>
+    </div>
+    <div class="game-item">
+      <img src="TeamFortress2.jpg" alt="Team Fortress 2">
+      <h3>Team Fortress 2</h3>
+    </div>
+    <div class="game-item">
+      <img src="TombRaider.webp" alt="Tomb Raider">
+      <h3>Tomb Raider</h3>
+    </div>
+     <div class="game-item">
+      <img src="TheBannerSaga.jpg" alt="The Banner Saga">
+      <h3>The Banner Saga</h3>
+    </div>
+    <div class="game-item">
+      <img src="DeadIslandEpidemic.jpeg" alt="Dead Island Epidemic">
+      <h3>Dead Island Epidemic</h3>
+    </div>
+    <div class="game-item">
+      <img src="BioShockInfinite.webp" alt="BioShock Infinite">
+      <h3>BioShock Infinite</h3>
+    </div>
+    <div class="game-item">
+      <img src="DragonAgeOrigins.webp" alt="Dragon Age Origins - Ultimate Edition">
+      <h3>Dragon Age Origins - Ultimate Edition</h3>
+    </div>
+    <div class="game-item">
+      <img src="Fallout3.webp" alt="Fallout 3 - Game of the Year Edition">
+      <h3>Fallout 3 - Game of the Year Edition</h3>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
