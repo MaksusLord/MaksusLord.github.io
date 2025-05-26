@@ -5,25 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рекомендации Игр</title>
     <style>
-        ol {
-            list-style-type: decimal; /*  Использовать числовую нумерацию */
-            padding-left: 20px; /* Добавить отступ слева */
+        .game-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: center; /* Центрируем содержимое карточки */
         }
-        li {
-            margin-bottom: 10px; /* Добавить отступ между элементами списка */
+
+        .game-card img {
+            width: 100%; /* Изображение во всю ширину карточки */
+            height: auto;
+            margin-bottom: 10px;
+            max-height: 200px; /* Максимальная высота изображения */
+            object-fit: cover; /* Обрезаем изображение, чтобы оно помещалось в контейнер */
         }
-        a {
-            text-decoration: none; /* Убрать подчеркивание у ссылок */
-            color: #007bff; /* Изменить цвет ссылки */
+
+        .game-card h3 {
+            margin-bottom: 5px;
+            font-size: 1.2em;
         }
-        a:hover {
-            text-decoration: underline; /* Подчеркивать ссылку при наведении */
+
+        .game-card p {
+            font-size: 0.9em;
+            color: #555;
         }
-        img {
-            width: 100px; /* Задать ширину изображению */
-            height: auto; /* Автоматически масштабировать высоту */
-            margin-right: 10px; /* Добавить отступ справа от изображения */
-            vertical-align: middle; /* Выровнять изображение по вертикали */
+
+        .game-card a {
+            text-decoration: none;
+            color: inherit; /* Наследуем цвет от родительского элемента */
+            display: block; /* Ссылка занимает всю карточку */
+        }
+
+        .game-card:hover {
+            background-color: #f5f5f5; /* Подсветка при наведении */
         }
     </style>
 </head>
@@ -31,40 +46,45 @@
 
     <h1>Рекомендации Игр</h1>
 
-    <ol>
-        <li>
-            <a href="game1.html">
-                <img src="1705065566_new_preview_terraria.jpg" alt="Terraria "> <br>
-                <b>Terraria </b> - Компьютерная игра в жанре приключенческой песочницы с открытым и красочным миром.
-            </a>
-        </li>
-        <li>
-            <a href="game2.html">
-                <img src="capsule_616x353.jpg" alt="Half-Life 2"> <br>
-                <b>Half-Life 2</b> - Компьютерная игра в жанре научно-фантастического шутера от первого лица.
-            </a>
-        </li>
-        <li>
-            <a href="game3.html">
-                <img src="Magica.webp" alt="Magicka"> <br>
-                <b>Magicka</b> -   компьютерная игра в жанре приключенческого экшена про магию.
-            </a>
-        </li>
-        <li>
-            <a href="game4.html"> <br>
-                <img src="witcher-3-modkit-update-enables-texture-editing_63963e35d6c9a.jpeg" alt="Skyrim High Resolution Texture Pack"> <br>
-                <b>Skyrim High Resolution Texture Pack</b> -  неофициальное дополнение для игры The Elder Scrolls V: Skyrim, которое заменяет многие текстуры в игре на версии более высокого разрешения.
-            </a>
-        </li>
-        <li>
-            <a href="game5.html"> 
-                <img src="orig.webp" alt="Torchlight II"> <br>
-                <b>Torchlight II</b> -  Компьютерная игра в жанре Action/RPG, продолжение серии игр Torchlight.
-            </a>
-        </li>
-        <li>
-            <!-- Остальные элементы списка -->
-    </ol>
+    <div class="game-card">
+        <a href="game1.html">
+            <img src="" alt="Terraria">
+            <h3>Terraria</h3>
+            <p>Компьютерная игра в жанре приключенческой песочницы с открытым и красочным миром.</p>
+        </a>
+    </div>
+
+    <div class="game-card">
+        <a href="game2.html">
+            <img src="" alt="Half-Life 2">
+            <h3>Half-Life 2</h3>
+            <p>Компьютерная игра в жанре научно-фантастического шутера от первого лица.</p>
+        </a>
+    </div>
+
+    <div class="game-card">
+        <a href="game3.html">
+            <img src="" alt="Magicka">
+            <h3>Magicka</h3>
+            <p>компьютерная игра в жанре приключенческого экшена про магию.</p>
+        </a>
+    </div>
+
+    <div class="game-card">
+        <a href="game4.html">
+            <img src="" alt="Skyrim High Resolution Texture Pack">
+            <h3>Skyrim High Resolution Texture Pack</h3>
+            <p>неофициальное дополнение для игры The Elder Scrolls V: Skyrim, которое заменяет многие текстуры в игре на версии более высокого разрешения.</p>
+        </a>
+    </div>
+
+    <div class="game-card">
+        <a href="game5.html">
+            <img src="" alt="Torchlight II">
+            <h3>Torchlight II</h3>
+            <p>Компьютерная игра в жанре Action/RPG, продолжение серии игр Torchlight.</p>
+        </a>
+    </div>
 
     <p>
         Больше рекомендаций будет добавлено позже!
