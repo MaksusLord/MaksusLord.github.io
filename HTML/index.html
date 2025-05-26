@@ -5,40 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рекомендации Игр</title>
     <style>
+        body {
+            font-family: sans-serif;
+        }
+
         .game-card {
+            width: 300px; /* Set a fixed width for the card */
             border: 1px solid #ccc;
             border-radius: 5px;
             margin-bottom: 20px;
             padding: 10px;
-            text-align: center; /* Центрируем содержимое карточки */
+            text-align: center;
+            display: inline-block; /* Allows cards to sit next to each other */
+            vertical-align: top; /* Align cards to the top */
+            margin-right: 20px; /* Add some spacing between cards */
         }
 
         .game-card img {
-            width: 100%; /* Изображение во всю ширину карточки */
+            width: 100%; /* Image fills the card width */
             height: auto;
             margin-bottom: 10px;
-            max-height: 200px; /* Максимальная высота изображения */
-            object-fit: cover; /* Обрезаем изображение, чтобы оно помещалось в контейнер */
+            max-height: 200px;
+            object-fit: cover;
         }
 
         .game-card h3 {
             margin-bottom: 5px;
             font-size: 1.2em;
+            word-wrap: break-word; /* Breaks long words */
         }
 
         .game-card p {
             font-size: 0.9em;
             color: #555;
+            word-wrap: break-word; /* Breaks long words */
+            text-align: left; /* Align description text to the left */
         }
 
         .game-card a {
             text-decoration: none;
-            color: inherit; /* Наследуем цвет от родительского элемента */
-            display: block; /* Ссылка занимает всю карточку */
+            color: inherit;
+            display: block;
         }
 
         .game-card:hover {
-            background-color: #f5f5f5; /* Подсветка при наведении */
+            background-color: #f5f5f5;
         }
     </style>
 </head>
@@ -48,41 +59,41 @@
 
     <div class="game-card">
         <a href="game1.html">
-            <img src="" alt="Terraria">
+            <img src="1705065566_new_preview_terraria.jpg" alt="Terraria">
             <h3>Terraria</h3>
-            <p>Компьютерная игра в жанре приключенческой песочницы с открытым и красочным миром.</p>
+            <p>Компьютерная игра в жанре приключенческой песочницы с открытым и красочным миром, где можно строить, сражаться и исследовать.</p>
         </a>
     </div>
 
     <div class="game-card">
         <a href="game2.html">
-            <img src="" alt="Half-Life 2">
+            <img src="capsule_616x353.jpg" alt="Half-Life 2">
             <h3>Half-Life 2</h3>
-            <p>Компьютерная игра в жанре научно-фантастического шутера от первого лица.</p>
+            <p>Компьютерная игра в жанре научно-фантастического шутера от первого лица с захватывающим сюжетом и инновационным геймплеем.</p>
         </a>
     </div>
 
     <div class="game-card">
         <a href="game3.html">
-            <img src="" alt="Magicka">
+            <img src="Magica.webp" alt="Magicka">
             <h3>Magicka</h3>
-            <p>компьютерная игра в жанре приключенческого экшена про магию.</p>
+            <p>компьютерная игра в жанре приключенческого экшена про магию, где игроки комбинируют элементы для создания заклинаний.</p>
         </a>
     </div>
 
     <div class="game-card">
         <a href="game4.html">
-            <img src="" alt="Skyrim High Resolution Texture Pack">
+            <img src="witcher-3-modkit-update-enables-texture-editing_63963e35d6c9a.jpeg" alt="Skyrim High Resolution Texture Pack">
             <h3>Skyrim High Resolution Texture Pack</h3>
-            <p>неофициальное дополнение для игры The Elder Scrolls V: Skyrim, которое заменяет многие текстуры в игре на версии более высокого разрешения.</p>
+            <p>неофициальное дополнение для игры The Elder Scrolls V: Skyrim, которое заменяет многие текстуры в игре на версии более высокого разрешения, улучшая визуальное качество.</p>
         </a>
     </div>
 
     <div class="game-card">
         <a href="game5.html">
-            <img src="" alt="Torchlight II">
+            <img src="orig.webp" alt="Torchlight II">
             <h3>Torchlight II</h3>
-            <p>Компьютерная игра в жанре Action/RPG, продолжение серии игр Torchlight.</p>
+            <p>Компьютерная игра в жанре Action/RPG, продолжение серии игр Torchlight, предлагающая динамичные сражения и увлекательный лут.</p>
         </a>
     </div>
 
